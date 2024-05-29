@@ -7,14 +7,14 @@
   body {
     font-family: 'Nunito', sans-serif;
     color: #384047;
-    background: #22232e;
+    background: #42424F;
   }
   
   form {
     max-width: 300px;
     margin: 10px auto;
     padding: 10px 20px;
-    background: #FFD80F;
+    background: #f7e383;
     border-radius: 8px;
   }
   
@@ -116,4 +116,12 @@
     }
   
   }
+
+  .faceAR-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+}
   

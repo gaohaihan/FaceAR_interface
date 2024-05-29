@@ -1,59 +1,107 @@
-/* styles for grid container */
-.grid-container {
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    font-family: Arial, sans-serif;
+    background-color: #42424F;
+    justify-items: center;
+    align-items: center;
+    padding: 80px;
+}
+
+main{
+    width: 80%;
+    background-color:#f7e383;
+    border-radius: 4px;
+}
+
+.faceAR-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.exercise-section {
+    margin-bottom: 40px;
+}
+
+.section-header {
+    width: 25%;
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+#sequential-exercises.section-header {
+    background-color: #28A745;
+}
+
+#games.section-header {
+    background-color: #FFC107;
+}
+
+.exercise-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 10px;
+    gap: 20px;
+}
+
+.exercise-item {
     position: relative;
+    text-align: center;
 }
 
-.grid-item {
-    overflow: hidden;
-}
-
-/* styles for collapsible button */
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
+.exercise-item button {
     border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+    background: none;
+    padding: 0;
+    cursor: pointer;
 }
 
-
-/* styles for active button and hover effect */
-.collapsible:hover {
-    background-color: #555;
-}
-
-/* styles for plus/minus sign */
-.collapsible:after {
-    content: '+';
-    /* default content */
-    font-size: 13px;
-    color: white;
-    float: right;
-    margin-left: 5px;
-}
-
-.collapsible.active:after {
-    content: "-";
-}
-
-/* styles for collapsible content */
-.content {
+.exercise-item img {
     width: 100%;
-    padding: 0 18px;
-    overflow: hidden;
-    background-color: #f1f1f1;
-    display: none;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
 }
 
-/* styles for collapsible content */
-.content.active {
-    display: block;
+.exercise-item img:hover {
+    transform: scale(1.05);
+}
+
+.exercise-name {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#exercise-description {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    display: none;
+    max-width: 200px;
+    z-index: 1000;
+}
+
+#exercise-description::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgba(0, 0, 0, 0.8);
+    top: -10px;
+    left: 20px;
 }

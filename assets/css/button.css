@@ -12,8 +12,8 @@ body {
   background: #22232e;
 }
 .btn-group button {
-  background-color: #FFD80F; /* Green background */
-  border: 3px solid darkgoldenrod; /* Green border */
+  background-color: #FFD80F; 
+  border: 3px solid darkgoldenrod;
   color: black; /* Black text */
   padding: 10px 24px; /* Some padding */
   cursor: pointer; /* Pointer/hand icon */
